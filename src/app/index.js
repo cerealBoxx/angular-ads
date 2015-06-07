@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstrap'])
+angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstrap', 'adsServices'])
+  .constant("apiUrl", "http://softuni-ads.azurewebsites.net/api")
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -9,13 +10,15 @@ angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstrap'])
         controller: 'MainCtrl'
       })
       .state('ads', {
+        url: '/ads',
         templateUrl:'app/ads/ads-main.html',
         controller: 'AdsMainCtrl'
       })
       //.state('ad-details', {
       //  temlateUrl: 'app/ads/ad-details.html',
       //  controller: 'AdDetailsCtrl'
-      //});
+      //})
+      ;
 
     $urlRouterProvider.otherwise('/');
   })
