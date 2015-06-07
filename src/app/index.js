@@ -7,7 +7,11 @@ angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstrap'])
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
-      });
+      })
+      //.state('ad-details', {
+      //  temlateUrl: 'app/ads/ad-details.html',
+      //  controller: 'AdDetailsCtrl'
+      //});
 
     $urlRouterProvider.otherwise('/');
   })
