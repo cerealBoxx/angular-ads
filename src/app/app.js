@@ -4,7 +4,10 @@ var app;
 app = angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstrap', 'adsServices'])
   .constant("apiUrl", "http://softuni-ads.azurewebsites.net/api")
   .constant("pageSize", 2)
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+
+   // $locationProvider.html5Mode(true).hashPrefix('!');
+
     $stateProvider
       .state('home', {
         url: '/',
@@ -12,8 +15,13 @@ app = angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstr
         controller: 'MainCtrl'
       })
       .state('login', {
-        templateUrl: 'app/login/login.html',
+        templateUrl: 'app/account/login.html',
         url:'/login',
+        controller: 'LoginCtrl'
+      })
+      .state('register', {
+        templateUrl:'app/account/register.html',
+        url:'/register',
         controller: 'LoginCtrl'
       })
       //.state('ads', {
