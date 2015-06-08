@@ -1,7 +1,7 @@
 'use strict';
 
 var app;
-app = angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstrap', 'adsServices'])
+app = angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstrap'])
   .constant("apiUrl", "http://softuni-ads.azurewebsites.net/api")
   .constant("pageSize", 2)
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {

@@ -1,3 +1,5 @@
-/**
- * Created by Cookie on 6/8/2015.
- */
+'use strict';
+
+app.controller('AddCtrl', ['$scope','authService', function($scope, authService){
+    $scope.authService = authService;
+}]);
