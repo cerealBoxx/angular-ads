@@ -30,7 +30,7 @@ app = angular.module('ads', ['ngCookies', 'ngResource', 'ui.router', 'ui.bootstr
       //  controller: 'AdsMainCtrl'
       //})
       //.state('ad-details', {
-      //  temlateUrl: 'app/ads/ad-details.html',
+      //  temlateUrl: 'app/ads/ad-detail.html',
       //  controller: 'AdDetailsCtrl'
       //})
     ;
