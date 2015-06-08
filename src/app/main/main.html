@@ -2,11 +2,11 @@
 
 
   <div class="row">
-    <div class="col-md-3 col-lg-3">
+    <div class="col-md-3 col-lg-3 component">
       <div class="row" ng-include="'app/components/sidenav/sidenav.html'"></div>
       <div class="row" ng-include="'app/components/sidenav/sidenav-login.html'"></div>
     </div>
-    <div class="col-md-6 col-lg-6">
+    <div class="col-md-6 col-lg-6 component">
         <div class="row clearfix" ng-repeat="ad in adArray |limitTo:2">
           <div class="thumbnail">
             <img class="pull-right" ng-src="assets/images/{{ad.imageDataUrl}}" alt="{{ad.title}}">
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="col-md-3 col-lg-3">
+    <div class="col-md-3 col-lg-3 ">
       <div class="row" ng-include="'app/components/sidenav/sidenav.html'"></div>
       <div class="row" ng-include="'app/components/sidenav/sidenav-login.html'"></div>
     </div>
